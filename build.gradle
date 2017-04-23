@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:1.5.2.RELEASE'
+    testCompile 'org.fluentlenium:fluentlenium-junit:3.2.0'
+    testCompile 'org.fluentlenium:fluentlenium-assertj:3.2.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.seleniumhq.selenium:selenium-remote-driver:2.53.1'
+    testCompile 'xml-apis:xml-apis:1.4.01'
+    testCompile 'com.github.detro:ghostdriver:2.0.0'
+}
+
+mainClassName = 'App'
+
