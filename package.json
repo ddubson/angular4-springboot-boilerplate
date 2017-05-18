@@ -4,11 +4,41 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "installGlobals": "npm i -g karma karma-cli karma-jasmine karma-phantomjs-launcher jasmine-core phantomjs-prebuilt",
+    "build": "webpack --progress",
+    "watch": "webpack --progress --watch",
+    "test": "npm run build && karma start webapp/test/karma.conf.js",
+    "testWatch": "karma start webapp/test/karma.conf.js --singleRun=false"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Dmitriy Dubson",
+  "license": "MIT",
   "dependencies": {
-    "phantomjs-prebuilt": "^2.1.14"
+    "@angular/common": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "@angular/forms": "^4.0.2",
+    "@angular/http": "^4.0.2",
+    "@angular/platform-browser": "^4.0.2",
+    "@angular/platform-browser-dynamic": "^4.0.2",
+    "@angular/router": "^4.0.2",
+    "babel-polyfill": "^6.23.0",
+    "intl": "^1.2.5",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "typescript": "^2.2.2",
+    "zone.js": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.47",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.4.0",
+    "html-webpack-plugin": "^2.28.0",
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "phantomjs-prebuilt": "^2.1.14",
+    "ts-loader": "^2.0.3",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

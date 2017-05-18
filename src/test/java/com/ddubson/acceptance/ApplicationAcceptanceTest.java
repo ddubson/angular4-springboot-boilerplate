@@ -1,5 +1,6 @@
-package com.ddubson;
+package com.ddubson.acceptance;
 
+import com.ddubson.App;
 import org.fluentlenium.adapter.junit.FluentTest;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Test;
@@ -12,11 +13,13 @@ import org.springframework.boot.context.embedded.LocalServerPort;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static org.fluentlenium.core.filter.FilterConstructor.withText;
 import static org.junit.Assert.assertTrue;
+import static org.openqa.selenium.phantomjs.PhantomJSDriverService.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = App.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class AppTest extends FluentTest {
+public class ApplicationAcceptanceTest extends FluentTest {
     @LocalServerPort
     int serverPort;
 
@@ -31,15 +34,15 @@ public class AppTest extends FluentTest {
     @Override
     public WebDriver newWebDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "node_modules/phantomjs-prebuilt/bin/phantomjs");
-        capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, new String[] { "--webdriver-loglevel=WARN", "--webdriver-logfile=logs/phantomjs.log" });
-        PhantomJSDriverService service = PhantomJSDriverService.createDefaultService(capabilities);
+        capabilities.setCapability(PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "node_modules/phantomjs-prebuilt/bin/phantomjs");
+        capabilities.setCapability(PHANTOMJS_CLI_ARGS, new String[] { "--webdriver-loglevel=WARN", "--webdriver-logfile=logs/phantomjs.log" });
+        PhantomJSDriverService service = createDefaultService(capabilities);
         return new PhantomJSDriver(service, capabilities);
     }
 
     @Test
-    public void testHomePage() {
+    public void homePageShouldDisplayHelloWorld() {
         homePage.go();
-        assertTrue(homePage.find("html").present());
+        assertTrue(homePage.find("div[data-test='welcome']", withText().contains("Hello World")).present());
     }
 }

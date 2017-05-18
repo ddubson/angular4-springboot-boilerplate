@@ -1,0 +1,6 @@
+logging.level:
+  org.springframework.web: WARN
+  org.springframework.boot: WARN
+  org.apache.catalina: WARN
+  org.seleniumhq.selenium: WARN
+  com.github.detro: WARN

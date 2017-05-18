@@ -1,14 +1,51 @@
-apply plugin: 'java'
-apply plugin: 'application'
+buildscript {
+    ext {
+        springBootVersion = "1.5.3.RELEASE"
+    }
+
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "com.moowork.gradle:gradle-node-plugin:1.1.1"
+    }
+}
 
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
 }
 
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'com.moowork.node'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task npmInstallGlobals(type: NpmTask) {
+    args = ['run', 'installGlobals']
+}
+
+task npmBuild(type: NpmTask) {
+    args = ['run', 'build']
+}
+task npmWatch(type: NpmTask) {
+    args = ['run', 'watch']
+}
+task npmTest(type: NpmTask) {
+    args = ['run', 'test']
+}
+
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE'
-    testCompile 'org.springframework.boot:spring-boot-starter-test:1.5.2.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE'
     testCompile 'org.fluentlenium:fluentlenium-junit:3.2.0'
     testCompile 'org.fluentlenium:fluentlenium-assertj:3.2.0'
     testCompile 'junit:junit:4.12'
@@ -16,6 +53,4 @@ dependencies {
     testCompile 'xml-apis:xml-apis:1.4.01'
     testCompile 'com.github.detro:ghostdriver:2.0.0'
 }
-
-mainClassName = 'App'
 

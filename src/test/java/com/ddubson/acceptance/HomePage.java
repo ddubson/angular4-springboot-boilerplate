@@ -1,4 +1,4 @@
-package com.ddubson;
+package com.ddubson.acceptance;
 
 import org.fluentlenium.core.FluentPage;
 import org.fluentlenium.core.annotation.PageUrl;

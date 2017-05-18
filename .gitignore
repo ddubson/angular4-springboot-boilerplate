@@ -4,3 +4,6 @@
 node_modules/
 logs/
 build/
+src/main/resources/static/scripts
+webapp/test/bundle/
+webapp/dist

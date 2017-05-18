@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "listFiles": false,
+    "outDir": "dist"
+  },
+  "files": ["src/main.ts"],
+  "include": [
+    "src/**/*"
+  ],
+  "types": [
+    "core-js",
+    "jasmine"
+  ],
+  "typeRoots": [
+    "../node_modules/@types"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
