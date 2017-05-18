@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ddubson/angular4-springboot-boilerplate.svg?branch=master)](https://travis-ci.org/ddubson/angular4-springboot-boilerplate)
+
 # Angular 4 / Spring Boot boilerplate application
 
 This project seeks to set up a jumping off point for an Angular 4 and
