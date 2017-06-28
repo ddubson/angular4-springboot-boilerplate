@@ -33,23 +33,39 @@ Additional tools that are involved are:
 ## Spring Boot
 
 Source File directory:
+
 ```bash
 src/main/java/com/ddubson/
 ```
 
 Test File directory
+
 ```bash
 src/test/java/com/ddubson/
 ```
 
 ## Angular 4
 
-Source File directory:`webapp/src/`
-Root src file: `webapp/src/main.ts`
-Root Angular App Module: `webapp/src/app.module.ts`
+##### Source
 
-Test File directory: `webapp/test/`
+Source file directory:`webapp/src/`
+
+Root src file: `webapp/src/main.ts`
+
+Root angular app module: `webapp/src/app.module.ts`
+
+##### Test
+
+Test file directory: `webapp/test/`
+
 Root test file: `webapp/test/test_index.js`
 
+###### Configuration 
+
+NPM configuration: `package.json`
+
+Webpack configuration: `webpack.config.js`
+
 Typescript configuration: `webapp/tsconfig.json`
+
 Karma configuration: `webapp/test/karma.conf.js`
