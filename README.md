@@ -1,4 +1,8 @@
 [![Build Status](https://travis-ci.org/ddubson/angular4-springboot-boilerplate.svg?branch=master)](https://travis-ci.org/ddubson/angular4-springboot-boilerplate)
+[![Dependency Status](https://www.versioneye.com/user/projects/59530ccc6725bd003f981464/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59530ccc6725bd003f981464)
+[![dependencies Status](https://david-dm.org/ddubson/angular4-springboot-boilerplate/status.svg)](https://david-dm.org/ddubson/angular4-springboot-boilerplate)
+[![devDependencies Status](https://david-dm.org/ddubson/angular4-springboot-boilerplate/dev-status.svg)](https://david-dm.org/ddubson/angular4-springboot-boilerplate?type=dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Angular 4 / Spring Boot boilerplate application
 

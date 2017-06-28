@@ -1,13 +1,12 @@
+ext.springBootVersion = "1.5.4.RELEASE"
+ext.fluentleniumVersion = "3.2.0"
+
 buildscript {
-    ext {
-        springBootVersion = "1.5.3.RELEASE"
-    }
+    ext.springBootVersion = "1.5.4.RELEASE"
 
     repositories {
         mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
 
     dependencies {
@@ -44,13 +43,12 @@ task npmTest(type: NpmTask) {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE'
-    testCompile 'org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE'
-    testCompile 'org.fluentlenium:fluentlenium-junit:3.2.0'
-    testCompile 'org.fluentlenium:fluentlenium-assertj:3.2.0'
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
     testCompile 'junit:junit:4.12'
+    testCompile "org.fluentlenium:fluentlenium-junit:$fluentleniumVersion"
     testCompile 'org.seleniumhq.selenium:selenium-remote-driver:2.53.1'
-    testCompile 'xml-apis:xml-apis:1.4.01'
+    testCompile 'xml-apis:xml-apis:2.0.2'
     testCompile 'com.github.detro:ghostdriver:2.0.0'
 }
 
