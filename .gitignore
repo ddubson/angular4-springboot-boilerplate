@@ -7,3 +7,5 @@ build/
 src/main/resources/static/scripts
 webapp/test/bundle/
 webapp/dist
+classes/
+out/

@@ -1,8 +1,7 @@
-ext.springBootVersion = "1.5.4.RELEASE"
-ext.fluentleniumVersion = "3.2.0"
-
 buildscript {
-    ext.springBootVersion = "1.5.4.RELEASE"
+    ext.springBootVersion = "1.5.8.RELEASE"
+    ext.fluentleniumVersion = "3.4.1"
+    ext.seleniumVersion = "3.5.3"
 
     repositories {
         mavenCentral()
@@ -21,7 +20,6 @@ repositories {
 }
 
 apply plugin: 'java'
-apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'com.moowork.node'
 
@@ -47,8 +45,12 @@ dependencies {
     testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
     testCompile 'junit:junit:4.12'
     testCompile "org.fluentlenium:fluentlenium-junit:$fluentleniumVersion"
-    testCompile 'org.seleniumhq.selenium:selenium-remote-driver:2.53.1'
-    testCompile 'xml-apis:xml-apis:2.0.2'
-    testCompile 'com.github.detro:ghostdriver:2.0.0'
+    testCompile "com.github.detro:ghostdriver:2.0.0"
+    testCompile "xml-apis:xml-apis:2.0.2"
+
+    testCompile "org.seleniumhq.selenium:selenium-remote-driver:$seleniumVersion"
+    testCompile "org.seleniumhq.selenium:selenium-api:$seleniumVersion"
+    testCompile "org.seleniumhq.selenium:selenium-java:$seleniumVersion"
+    testCompile "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
 }
 

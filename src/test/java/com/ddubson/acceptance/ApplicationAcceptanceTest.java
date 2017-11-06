@@ -5,6 +5,7 @@ import org.fluentlenium.adapter.junit.FluentTest;
 import org.fluentlenium.core.annotation.Page;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
@@ -35,7 +36,10 @@ public class ApplicationAcceptanceTest extends FluentTest {
     public WebDriver newWebDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "node_modules/phantomjs-prebuilt/bin/phantomjs");
-        capabilities.setCapability(PHANTOMJS_CLI_ARGS, new String[] { "--webdriver-loglevel=WARN", "--webdriver-logfile=logs/phantomjs.log" });
+        capabilities.setPlatform(Platform.ANY);
+        capabilities.setCapability(PHANTOMJS_CLI_ARGS,
+                new String[] { "--webdriver-loglevel=WARN",
+                        "--webdriver-logfile=logs/phantomjs.log" });
         PhantomJSDriverService service = createDefaultService(capabilities);
         return new PhantomJSDriver(service, capabilities);
     }
