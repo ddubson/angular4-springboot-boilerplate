@@ -26,18 +26,18 @@ apply plugin: 'com.moowork.node'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-task npmInstallGlobals(type: NpmTask) {
-    args = ['run', 'installGlobals']
+task yarnInstallGlobals(type: YarnTask) {
+    args = ['installGlobals']
 }
 
-task npmBuild(type: NpmTask) {
-    args = ['run', 'build']
+task yarnBuild(type: YarnTask) {
+    args = ['build']
 }
-task npmWatch(type: NpmTask) {
-    args = ['run', 'watch']
+task yarnWatch(type: YarnTask) {
+    args = ['watch']
 }
-task npmTest(type: NpmTask) {
-    args = ['run', 'test']
+task yarnTest(type: YarnTask) {
+    args = ['test']
 }
 
 dependencies {

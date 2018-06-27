@@ -1,7 +1,3 @@
 language: java
 jdk: oraclejdk8
-before_install:
-  - if [[ `npm -v` != 4* ]]; then npm i -g npm@4; fi
-  - nvm install 7.8.0
-  - nvm use 7.8.0
-script: ./gradlew clean npm_install npmInstallGlobals npmTest build
+script: ./gradlew clean yarn_install yarnInstallGlobals yarnTest build
