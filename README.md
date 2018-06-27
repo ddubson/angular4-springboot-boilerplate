@@ -13,7 +13,7 @@ Additional tools that are involved are:
 - Fluentlenium (Acceptance testing)
 - Jasmine test framework
 - Karma test runner
-- Gradle NodeJS plugin (for executing NPM tasks via Gradle)
+- Gradle NodeJS plugin (for executing Yarn tasks via Gradle)
 
 ## Running the Application
 
