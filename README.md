@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/ddubson/angular4-springboot-boilerplate.svg?branch=master)](https://travis-ci.org/ddubson/angular4-springboot-boilerplate)
-[![Dependency Status](https://www.versioneye.com/user/projects/59530ccc6725bd003f981464/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59530ccc6725bd003f981464)
 [![dependencies Status](https://david-dm.org/ddubson/angular4-springboot-boilerplate/status.svg)](https://david-dm.org/ddubson/angular4-springboot-boilerplate)
 [![devDependencies Status](https://david-dm.org/ddubson/angular4-springboot-boilerplate/dev-status.svg)](https://david-dm.org/ddubson/angular4-springboot-boilerplate?type=dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -19,16 +18,16 @@ Additional tools that are involved are:
 ## Running the Application
 
 ```bash
-./gradlew npmInstallGlobals npmBuild bootRun
+./gradlew yarnInstallGlobals yarnBuild bootRun
 ```
 
 ## Executing the tests
 
 ```bash
-./gradlew npmTest test
+./gradlew yarnTest test
 ```
 
-> npmInstallGlobals needs to be run only once
+> yarnInstallGlobals needs to be run only once
 
 ## Spring Boot
 
@@ -48,24 +47,18 @@ src/test/java/com/ddubson/
 
 ##### Source
 
-Source file directory:`webapp/src/`
-
-Root src file: `webapp/src/main.ts`
-
-Root angular app module: `webapp/src/app.module.ts`
+- Source file directory:`webapp/src/`
+- Root src file: `webapp/src/main.ts`
+- Root angular app module: `webapp/src/app.module.ts`
 
 ##### Test
 
-Test file directory: `webapp/test/`
-
-Root test file: `webapp/test/test_index.js`
+- Test file directory: `webapp/test/`
+- Root test file: `webapp/test/test_index.js`
 
 ###### Configuration 
 
-NPM configuration: `package.json`
-
-Webpack configuration: `webpack.config.js`
-
-Typescript configuration: `webapp/tsconfig.json`
-
-Karma configuration: `webapp/test/karma.conf.js`
+- NPM configuration: `package.json`
+- Webpack configuration: `webpack.config.js`
+- Typescript configuration: `webapp/tsconfig.json`
+- Karma configuration: `webapp/test/karma.conf.js`
