@@ -1,12 +1,9 @@
-var path = require('path')
+const path = require('path');
 
 module.exports = {
-    entry: {
-        "./src/main/resources/static/scripts/bundle": './webapp/src/main.ts',
-        "./webapp/test/bundle/testbundle": './webapp/test/test_index.js'
-    },
     output: {
         filename: '[name].js',
+        chunkFilename: '[name].chunk.js',
         libraryTarget: 'var',
         library: ''
     },
