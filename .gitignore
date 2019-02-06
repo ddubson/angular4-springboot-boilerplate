@@ -9,3 +9,5 @@ webapp/test/bundle/
 webapp/dist
 classes/
 out/
+dist/
+*.log
